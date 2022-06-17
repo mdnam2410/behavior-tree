@@ -58,6 +58,8 @@ public class EnemyAI : MonoBehaviour
             Destroy(gameObject);
         }
 
+        _behaviorTree.SetVariable("AllPlayersAreDead", (SharedBool) PlayerManager.Instance.AllPlayerAreDead);
+
         for (int i = 0; i < Targets.Count; ++i)
         {
             if (Targets[i].activeInHierarchy == false)

@@ -53,10 +53,12 @@ public class Player : MonoBehaviour
             }
         }
 
+    }
+
+    private void LateUpdate()
+    {
         if (_attributeData.HP <= 0)
         {
-            GlobalVariables.Instance.SetVariable("PlayerIsDead", (SharedBool) true);
-            // Destroy(gameObject);
             gameObject.SetActive(false);
         }
     }
