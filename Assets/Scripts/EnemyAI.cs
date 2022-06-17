@@ -60,13 +60,13 @@ public class EnemyAI : MonoBehaviour
 
         _behaviorTree.SetVariable("AllPlayersAreDead", (SharedBool) PlayerManager.Instance.AllPlayerAreDead);
 
-        for (int i = 0; i < Targets.Count; ++i)
-        {
-            if (Targets[i].activeInHierarchy == false)
-            {
-                Targets.Remove(Targets[i]);
-            }
-        }
+        // for (int i = 0; i < Targets.Count; ++i)
+        // {
+        //     if (Targets[i].activeInHierarchy == false)
+        //     {
+        //         Targets.Remove(Targets[i]);
+        //     }
+        // }
     }
 
     private void OnSpawnProjectile()

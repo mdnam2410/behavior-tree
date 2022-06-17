@@ -16,6 +16,6 @@ public class HealthBar : MonoBehaviour
     {
         transform.LookAt(transform.position + _mainCamera.transform.rotation * Vector3.forward,
                          _mainCamera.transform.rotation * Vector3.up);
-        _text.SetText($"Health: {_attributeData.HP}");
+        _text.SetText($"Health: {_attributeData.HP}/{_attributeData.MaxHP}");
     }
 }

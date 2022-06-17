@@ -682,6 +682,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 462b052ea74ee4258bb31555a0dabde9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MaxHP: 50
   HP: 50
   Attack: 50
 --- !u!1 &199456394
@@ -836,6 +837,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 462b052ea74ee4258bb31555a0dabde9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MaxHP: 1000
   HP: 1000
   Attack: 10
 --- !u!1 &681163886
@@ -1083,6 +1085,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 462b052ea74ee4258bb31555a0dabde9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MaxHP: 1000
   HP: 1000
   Attack: 10
 --- !u!1 &739783650
@@ -1828,6 +1831,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 462b052ea74ee4258bb31555a0dabde9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MaxHP: 1000
   HP: 1000
   Attack: 10
 --- !u!1 &1641659661
