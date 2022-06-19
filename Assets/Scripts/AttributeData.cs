@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class AttributeData : MonoBehaviour
 {
-    public int HP = 100;
+    public int MaxHP;
+    public int HP;
     public int Attack = 50;
+
+    public void OnValidate()
+    {
+        HP = MaxHP;
+    }
 
     public void ReceiveDamage(int damage)
     {

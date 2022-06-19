@@ -51,6 +51,9 @@ ExportedObj/
 # Unity3D generated file on crash reports
 sysinfo.txt
 
+# UserSettings
+UserSettings/
+
 # Builds
 *.apk
 *.unitypackage
@@ -60,3 +63,5 @@ crashlytics-build.properties
 
 # Visual Studio Code config
 .vscode/
+
+.fake

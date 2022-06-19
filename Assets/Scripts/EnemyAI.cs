@@ -12,13 +12,11 @@ public class EnemyAI : MonoBehaviour
     ExternalBehavior ExternalBehavior;
     [SerializeField]
     private GameObject _projectilePrefab;
-
     [SerializeField]
     [HideInInspector]
     private AttributeData _attributeData;
 
     BehaviorTree _behaviorTree;
-
     SharedFloat _speed;
     SharedFloat _viewDistance;
     SharedFloat _fieldOfView;
@@ -58,22 +56,18 @@ public class EnemyAI : MonoBehaviour
             Destroy(gameObject);
         }
 
-        for (int i = 0; i < Targets.Count; ++i)
-        {
-            if (Targets[i].activeInHierarchy == false)
-            {
-                Targets.Remove(Targets[i]);
-            }
-        }
+        _behaviorTree.SetVariable("AllPlayersAreDead", (SharedBool) PlayerManager.Instance.AllPlayerAreDead);
     }
 
     private void OnSpawnProjectile()
     {
+        // Look at the player
+        transform.LookAt(_target.Value.transform);
+
         List<float> angles = new List<float> { -20, -10, 0, 10, 20 };
         for (int i = 0; i < angles.Count; ++i)
         {
-            // Direction from the enemy to the player
-            // var projectileDirection = _target.Value.transform.position - transform.position;
+            // Spawn in the direction of the gun
             Vector3 projectileDirection = Quaternion.AngleAxis(angles[i], Vector3.up) * transform.forward;
             var projectileLaunchPosition = transform.position + projectileDirection * 2f + new Vector3(0, 0.5f, 0);
 
