@@ -12,13 +12,11 @@ public class EnemyAI : MonoBehaviour
     ExternalBehavior ExternalBehavior;
     [SerializeField]
     private GameObject _projectilePrefab;
-
     [SerializeField]
     [HideInInspector]
     private AttributeData _attributeData;
 
     BehaviorTree _behaviorTree;
-
     SharedFloat _speed;
     SharedFloat _viewDistance;
     SharedFloat _fieldOfView;
@@ -59,14 +57,6 @@ public class EnemyAI : MonoBehaviour
         }
 
         _behaviorTree.SetVariable("AllPlayersAreDead", (SharedBool) PlayerManager.Instance.AllPlayerAreDead);
-
-        // for (int i = 0; i < Targets.Count; ++i)
-        // {
-        //     if (Targets[i].activeInHierarchy == false)
-        //     {
-        //         Targets.Remove(Targets[i]);
-        //     }
-        // }
     }
 
     private void OnSpawnProjectile()

@@ -7,12 +7,12 @@ using BehaviorDesigner.Runtime;
 
 public class Player : MonoBehaviour
 {
-    private NavMeshAgent _navMeshAgent;
     [SerializeField]
     GameObject _projectilePrefab;
-
     [SerializeField]
     private AttributeData _attributeData;
+
+    private NavMeshAgent _navMeshAgent;
 
     private void OnValidate()
     {
@@ -23,8 +23,6 @@ public class Player : MonoBehaviour
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();
     }
-
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetMouseButtonDown(0))

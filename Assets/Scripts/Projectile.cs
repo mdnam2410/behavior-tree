@@ -1,11 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
-
-// public class UnityEventGameObject : UnityEvent<GameObject>
-// {
-// }
 
 public class Projectile : MonoBehaviour
 {
@@ -15,11 +10,6 @@ public class Projectile : MonoBehaviour
     [HideInInspector]
     public GameObject Caster;
 
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
     void Update()
     {
         _currentRange += Speed * Time.deltaTime;

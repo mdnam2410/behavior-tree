@@ -8,8 +8,8 @@ public class PlayerManager : MonoBehaviour
 
     [SerializeField]
     private List<GameObject> _players;
+    
     private int _alivePlayersCount;
-
     public int PlayersCount
     {
         get => _players.Count;
